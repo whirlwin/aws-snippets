@@ -13,7 +13,7 @@ wafRule=waf_rule_123
 region=eu-north-1
 
 First download all WAF logs
-aws s3 cp s3://${myAlb}/AWSLogs/${accountId}/WAFLogs/${region}/${waf_rule_123}/${filterDate} . --recursive
+aws s3 cp s3://${albName}/AWSLogs/${accountId}/WAFLogs/${region}/${waf_rule_123}/${filterDate} . --recursive
 
 # Clean up from previous runs, if any
 rm -rf ./**/*.log
