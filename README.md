@@ -5,14 +5,14 @@ Useful collection of scripts for working with AWS through the AWS CLI
 If you prefer to easily get and query WAF logs, you can use `jq`, instead of configuring Athena which is difficult, expensive and error-prone.
 
 ```shell
-Set all required variables in the shell, adjust accordingly.
+# Set all required variables in the shell, adjust accordingly.
 accountId=123456789
 albName=myAlb
 filterDate=2024/09/13
 wafRule=waf_rule_123
 region=eu-north-1
 
-First download all WAF logs
+# First download all WAF logs
 aws s3 cp s3://${albName}/AWSLogs/${accountId}/WAFLogs/${region}/${waf_rule_123}/${filterDate} . --recursive
 
 # Clean up from previous runs, if any
